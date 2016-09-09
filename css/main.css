@@ -1,0 +1,124 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#quoteMachine {
+	/*background is dynamic in jquery*/
+	-webkit-transition: background .5s linear;
+	transition: background .5s linear;
+	-webkit-transition-delay: .75s; /* Safari */
+    transition-delay: .75s;
+	background-size: cover;
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+
+}
+
+.container {
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	max-width: 30rem;
+	border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (-ms-high-contrast: none) {
+  /*internet explorer specific styles to fix margin auto computing as 0.*/
+#quoteMachine{
+
+}
+
+.container {
+	margin-top: 30vh;
+}
+}
+
+
+
+#text {
+	font-family: 'Slabo 27px', serif;
+	color: #fff;
+	padding: 1rem;
+	margin: 0;
+	text-align: center;
+	font-size: 2rem;
+
+	
+}
+
+@media screen and (max-width: 30rem) {
+	.container {
+		margin: auto 0.5rem;
+	}
+	#text {
+		font-size: 1.7rem;
+	}
+}
+
+.quote-auther{
+	display: block;
+}
+
+#author {
+	font-family: 'Slabo 27px', serif;
+	color: #fff;
+	text-align: right;
+	font-size: 1.3rem;
+	font-style: italic;
+	margin: 0;
+	margin-left: auto;
+	padding: 1rem;
+	padding-right: 2rem;
+}
+
+.fa-wikipedia-w{
+	color: #fff;
+}
+
+.social {
+	margin: auto;
+	padding: 1rem 0;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: 100%;
+}
+
+.buttons {
+	margin: auto;
+	color: lightgreen;
+	opacity: 0.65;
+	cursor: pointer;
+}
+
+.twitter-share-button{
+	color: #1da1f2;
+}
+
+
+
+.buttons a:active{
+	color: lightgreen;
+}
+
+#refresh{
+  transition:all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+
+}
+#refresh.rotate{
+  transform: rotate(360deg); 
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+}
