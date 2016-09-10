@@ -105,8 +105,6 @@ body {
 	color: #1da1f2;
 }
 
-
-
 .buttons a:active{
 	color: lightgreen;
 }
@@ -118,7 +116,43 @@ body {
 
 }
 #refresh.rotate{
-  transform: rotate(360deg); 
+ 
   -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
+  -moz-transform: rotate(360deg); 
+  transform: rotate(360deg); 
+}
+
+
+
+.bottom-container {
+  list-style: none;
+  padding-left: 0;
+  opacity: .5;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media all and (max-width: 22.5rem){
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+}
+}
+.bottom-nav{
+    -webkit-justify-content: space-between; 
+  justify-content: space-between; 
+}
+
+.nav-item {
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+
+.nav-item a{
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+	font-size: 1.1rem;
+  text-decoration: none;
 }
