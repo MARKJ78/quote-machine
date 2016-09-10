@@ -2,7 +2,6 @@
 //function calls
 $(document).ready(function() {
   fetch();
-  preloadImages()
 });
 $(".refresh").click(function() {
   fetch();
