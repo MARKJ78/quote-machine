@@ -12,10 +12,12 @@ function fetch() {
   $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?", function(response) {
     $(".quote-text").animate({opacity: 0}, 500, function() {
       $(this).animate({opacity: 1}, 750);
-      $('#text').html('<i class="fa fa-quote-left fa-lg"></i>' + '&nbsp;&nbsp;' + response.quoteText);});
+      $('#text').html('<i class="fa fa-quote-left fa-lg"></i>' + '&nbsp;&nbsp;' + response.quoteText);
+    });
     $(".quote-author").animate({opacity: 0}, 500, function() {
       $(this).animate({opacity: 1}, 750);
-      $('#author').html('~ ' + response.quoteAuthor);});
+      $('#author').html('~ ' + response.quoteAuthor);
+    });
     //configure tweet button with quote and author info
     $('.twitter-share-button').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&text=' + '"' + response.quoteText + '"' + '  ~' + response.quoteAuthor);
     $('.twitter-share-button').attr('target', '_blank'); 
@@ -67,7 +69,14 @@ var images = [
   'https://markj78.github.io/quote-machine/img/25.jpg'
 ];
 
+//ALLOWS CROSS ORIGIN HTTP API VIA HTTPS SITE (Thanks stack overflow)
 
+
+jQuery.ajaxPrefilter(function(options) {
+  if (options.crossDomain && jQuery.support.cors) {
+    options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+  }
+});
 
 
 //END
