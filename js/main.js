@@ -20,16 +20,16 @@ function fetch() {
     });
     //configure tweet button with quote and author info
     $('.twitter-share-button').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&text=' + '"' + response.quoteText + '"' + '  ~' + response.quoteAuthor);
-    $('.twitter-share-button').attr('target', '_blank'); 
+    $('.twitter-share-button').attr('target', '_blank');
     //configure Auther Wiki button
     if (response.quoteAuthor.length > 0){
       $('#wikibox').css({'display': 'inline-block'});
       $('.wiki-search-button').attr('href', 'https://en.wikipedia.org/wiki/' + response.quoteAuthor);
     $('.wiki-search-button').attr('target', '_blank');
-    };
-    if (response.quoteAuthor.length == 0){
+    }
+    if (response.quoteAuthor.length === 0){
       $('#wikibox').css({'display': 'none'});
-    };
+    }
   });
   //choose a random background
   $('#quoteMachine').css({'background': 'url(' + images[Math.floor(Math.random() * images.length)] + ')' + 'no-repeat center center fixed'});
